@@ -1,0 +1,25 @@
+<mat-card class="mar">
+    <div class="section">
+        <app-radio-button
+            [DATA_TYPES]="DATA_TYPES"
+            (changeDataType)='handleChangeDataType($event)'
+        ></app-radio-button>
+    </div>
+    <div class="section">
+        <app-table
+            *ngIf="tableData.length"
+            [tableHeaders]="tableHeaders"
+            [tableData]="tableData"
+            (selectRow)=handleSelecteRow($event)
+        ></app-table>
+    </div>
+
+    <div class="row" *ngIf="this.selectedRowData ">
+        <p>
+            Выбрано:
+        </p>
+        <p>id: {{ selectedRowData.id }}, name: {{ selectedRowData.name }}, price: {{ selectedRowData.price }}, quantity: {{ selectedRowData.quantity }}</p>
+    </div>
+
+
+</mat-card>

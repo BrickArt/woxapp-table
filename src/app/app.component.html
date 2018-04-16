@@ -1,0 +1,8 @@
+<div class="container">
+    <app-article class="article"
+        *ngFor="let table of tables"
+    ></app-article>
+    <app-add-button
+        (onAddClick)="handleAdd()"
+    ></app-add-button>
+</div>

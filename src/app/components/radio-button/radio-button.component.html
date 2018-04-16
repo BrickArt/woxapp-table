@@ -1,0 +1,6 @@
+<p>
+  Набор данных:
+</p>
+<mat-radio-group class="row" [(ngModel)]="selectedDataType" (change)="onChange()">
+  <mat-radio-button class="radio" *ngFor="let type of DATA_TYPES" [value]="type.value">{{ type.name }}</mat-radio-button>
+</mat-radio-group>
